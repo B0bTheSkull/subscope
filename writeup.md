@@ -39,7 +39,7 @@ This method has great coverage because developers can't hide it — every public
 
 The built-in wordlist covers the most common subdomain patterns: `api`, `admin`, `dev`, `staging`, `vpn`, `portal`, `grafana`, `jenkins`, `gitlab`, `k8s`, `cdn`, `mail`, and hundreds more. For each word, SubScope tries to resolve `word.domain.com`.
 
-Concurrent resolution with configurable thread count (default 50) makes this fast. A typical 500-word wordlist against a responsive DNS server runs in a few seconds.
+Concurrent resolution with configurable thread count (default 50) makes this fast. The built-in 277-prefix wordlist against a responsive DNS server runs in a few seconds.
 
 Custom wordlists are supported via `--wordlist`. For serious work, I'll use a larger wordlist (SecLists has good ones) alongside the built-in.
 

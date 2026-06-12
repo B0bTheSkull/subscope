@@ -15,7 +15,7 @@
 | Method | Description |
 |--------|-------------|
 | **Certificate Transparency** | Queries crt.sh for all subdomains ever issued a TLS cert |
-| **DNS Brute Force** | Resolves 500+ common subdomain prefixes concurrently |
+| **DNS Brute Force** | Resolves 277 common subdomain prefixes concurrently |
 | **HTTP Probing** | Checks each live subdomain for status, title, redirect chain |
 | **Takeover Detection** | Checks CNAME records against 18+ known-vulnerable service patterns |
 
@@ -139,7 +139,7 @@ GitHub Pages, Netlify, Heroku, AWS S3, CloudFront, Azure, Fastly, Surge, Bitbuck
 
 ## Built-in Wordlist
 
-Includes 500+ common subdomain prefixes: `api`, `admin`, `dev`, `staging`, `vpn`, `portal`, `grafana`, `jenkins`, `gitlab`, `k8s`, `cdn`, `mail`, and many more.
+Includes 277 common subdomain prefixes: `api`, `admin`, `dev`, `staging`, `vpn`, `portal`, `grafana`, `jenkins`, `gitlab`, `k8s`, `cdn`, `mail`, and many more.
 
 ---
 
