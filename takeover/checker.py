@@ -1,6 +1,9 @@
 """Subdomain takeover detection via CNAME fingerprinting."""
+import logging
 import socket
 import re
+
+logger = logging.getLogger(__name__)
 
 # Known vulnerable CNAME patterns and their associated services
 # Format: (regex_pattern, service_name, fingerprint_in_response)
@@ -77,6 +80,6 @@ def check_takeover(subdomain, ip=None):
                         "vulnerable": "potential"
                     }
             except Exception:
-                pass
+                logger.warning("Takeover HTTP probe failed for %s", subdomain, exc_info=True)
 
     return None

@@ -1,6 +1,9 @@
 """Certificate transparency lookup via crt.sh."""
+import logging
 import re
 import requests
+
+logger = logging.getLogger(__name__)
 
 CRT_SH_URL = "https://crt.sh/?q=%.{domain}&output=json"
 TIMEOUT = 20
@@ -30,6 +33,6 @@ def query(domain):
                     if re.match(r'^[a-z0-9\-\.]+$', name):
                         subdomains.add(name)
     except Exception:
-        pass
+        logger.exception("crt.sh certificate transparency lookup failed for %s", domain)
 
     return subdomains
